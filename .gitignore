@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+npm-debug.log
+distnode_modules
+public/static/bundle.js
+public/static/bundle.js.map

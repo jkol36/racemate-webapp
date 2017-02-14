@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "usertrades": {
+      ".indexOn": [
+        "status",
+        "createdAt",
+        "match/startTime"
+      ]
+    },
+    "users": {
+      ".indexOn": ["createdAt", "subscription/permissionLevel"]
+    },
+    ".read": true,
+    ".write": true
+  }
+}

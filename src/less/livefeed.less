@@ -1,0 +1,56 @@
+.livefeed-list {
+  .livefeed-item {
+    border: none;
+    background-color: #d9edf7;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    .icon {
+
+      i {
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 40px;
+        font-size: 35px;
+        color: #99cce3;
+      }
+    }
+
+    .info {
+      margin-left: 56px;
+      margin-top: -40px;
+
+      span {
+        &.highlighted {
+          color: inherit;
+        }
+
+        &:not(.highlighted) {
+          color: #999;
+        }
+      }
+
+    }
+  }
+}
+
+.livefeed-enter {
+  opacity: 0;
+}
+
+.livefeed-enter.livefeed-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.livefeed-leave {
+  opacity: 1;
+}
+
+.livefeed-leave.livefeed-leave-active {
+  opacity: 0.01;
+  transition: opacity 1s ease-in;
+}

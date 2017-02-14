@@ -1,0 +1,286 @@
+.composable-tradefeed {
+  font-weight: 400;
+  p {
+    margin-bottom: 3px;
+  }
+
+  .tools {
+    .active {
+      background: #7FB800;
+      color: white;
+    }
+  }
+
+  th {
+    font-weight: 300;
+    text-align: center;
+
+    &.text-success {
+      font-weight: 400;
+    }
+
+    &.search {
+      padding-bottom: 0;
+    }
+  }
+
+  tr {
+    cursor: pointer;
+    text-align: center;
+
+    &.placed {
+      background-color: rgba(127,184,0,0.2);
+
+      &:hover {
+        background-color: rgba(127,184,0,0.3);
+      }
+    }
+  }
+
+  .match-cell {
+    text-align: left;
+    .teams {
+      font-size: 1.6rem;
+      color: black;
+      .vs {
+        color: #767676;
+        font-size: 1.4rem;
+      }
+    }
+
+    .line {
+      color: #03abf7;
+    }
+
+    .time {
+      font-size: 1.3rem;
+      i {
+        font-size: 1.4rem;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  .stake-cell {
+    .currency {
+      padding-left: 3px;
+      font-weight: 300;
+    }
+  }
+
+  .hider {
+  }
+}
+
+.tradefeed-panel {
+  max-width: 800px;
+  margin: auto;
+
+  .list-group-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .home, .away {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 400;
+  }
+  .vs-divider {
+    float: center;
+    margin: 5px auto !important;
+    width: 6% !important;
+    border-top: 1px solid #c3c3c3;
+  }
+
+  .teams {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .vs {
+    font-weight: 300;
+    padding: 0 5px;
+  }
+
+  .divider {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    width: 85%;
+  }
+
+  span.time {
+    position: absolute;
+    left: 5px;
+    bottom: 3px;
+    font-size: 1.3rem;
+    color: #c3c3c3;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  .odds-type {
+    color: #03abf7;
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+  }
+
+  .league {
+    padding-top: 0;
+    font-size: 1.3rem;
+  }
+
+  span.bookmaker {
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+    font-size: 1.3rem;
+    color: #c3c3c3;
+    text-transform: uppercase;
+  }
+}
+
+.trade-modal {
+
+  button.close {
+    font-size: 2.5rem;
+  }
+  .modal-dialog {
+    max-width: 450px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-header {
+    padding-bottom: 0px;
+  }
+  .modal-title {
+    color: black;
+    text-align: center;
+
+    .title {
+      padding-bottom: 5px;
+    }
+    .text-muted {
+      font-size: 1.4rem;
+      i {
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+  }
+
+  .modal-body {
+    padding-bottom: 0;
+    color: black;
+    .label {
+      color: black;
+      font-weight: 300;
+      font-size: 1.6rem;
+      text-decoration: underline;
+    }
+
+    .odds-type {
+      font-size: 1.8rem;
+      color: #03abf7;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+
+    .value {
+      font-size: 1.8rem;
+
+      input {
+        text-align: center;
+      }
+    }
+
+    .input-block {
+      padding-top: 20px;
+    }
+
+    .wager-input {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      input {
+        height: 45px;
+        font-size: 2.3rem;
+        text-align: center;
+      }
+    }
+
+    .register-trade-button {
+      width: 100%;
+      margin-top: 30px;
+      font-size: 2.5rem;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      line-height: 100%;
+      background-color: #03abf7;
+      color: white;
+      border-radius: 0;
+    }
+  }
+}
+
+.add-preset-modal, .edit-preset-modal {
+  .modal-dialog {
+    margin-top: 5px;
+  }
+  input {
+    z-index: 0 !important;
+  }
+}
+
+
+.floating-input-group {
+  position: relative;
+
+  label {
+    color:#999;
+    font-size:1.6rem;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:5px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+
+    i {
+      padding-right: 5px;
+    }
+  }
+
+  input {
+    font-size: 1.6rem;
+    padding: 5px 5px 5px 5px;
+    display: block;
+    width: 90%;
+    border: none;
+    font-weight: 400;
+    // border-bottom: 1px solid #757575;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input:focus ~ label, input:valid ~ label {
+    top: -15px;
+    font-size: 1.3rem;
+    color: #5264AE;
+  }
+
+}

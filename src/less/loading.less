@@ -1,0 +1,41 @@
+.loading-outer-container {
+  width: 100bh;
+  height: 100vh;
+  background-color: #03abf7;
+  color: #fff;
+
+  .loading-container {
+    text-align: center;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    .phrase {
+      padding-top: 20px;
+      margin-bottom: 20px;
+      font-weight: 300;
+      p {
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+      }
+      small {
+        font-size: 2rem;
+      }
+    }
+
+    .sk-cube {
+      &:before {
+        background-color: #fff;
+      }
+    }
+
+    i {
+      font-size: 3rem;
+    }
+
+    .spinner {
+      width: 100px;
+    }
+  }
+}

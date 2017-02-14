@@ -1,0 +1,353 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility!important;
+  -webkit-font-smoothing: antialiased!important;
+}
+
+body {
+  font-family: 'Lato';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #4f565c;
+  background-color: #f1f2f7;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.btn {
+  font-weight: 400;
+  text-transform: uppercase;
+  &.btn-success {
+    background: #7FB800;
+    border-color: #7FB800;
+  }
+}
+
+.panel {
+
+  .panel-heading {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 15px;
+    text-transform: uppercase;
+    color: #232425;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .tools {
+      margin: -5px;
+      float: right;
+      color: #03abf7;
+
+      a {
+        cursor: pointer;
+        float: left;
+        margin-left: 15px;
+        padding: 3px 5px;
+        border: 1px solid #c0c0c0;
+        text-decoration: none;
+        font-size: 2rem;
+
+        &:hover {
+          background-color: #c0c0c0;
+        }
+      }
+    }
+  }
+
+}
+
+#content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+
+    .header {
+      margin-right: 0;
+      margin-left: 0;
+      box-shadow: 1px 0 3px rgba(0,0,0,.15);
+      height: 60px;
+      background: white;
+      margin-bottom: 15px;
+      position: fixed;
+      width: calc(~"100% - 70px");
+      z-index: 1000;
+
+      .collapsable-menu {
+        display: none;
+      }
+
+      .content {
+        padding-top: 10px;
+        font-size: 1.6rem;
+      }
+
+      .clickable-profile {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+          color: #03abf7;
+        }
+        div.photo {
+          float: right;
+          height: 50px;
+          width: 50px;
+          margin-right: 5px;
+          margin-top: -5px;
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+
+
+      .value {
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+}
+
+#page-wrapper {
+  padding-left: 70px;
+  height: 100%;
+}
+
+#sidebar-wrapper {
+    background: #39393B;
+    margin-left: 0px;
+    left: 0px;
+    width: 70px;
+    position: fixed;
+    height: 100%;
+    z-index: 999;
+
+    ul.sidebar {
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      padding: 0;
+      list-style: none;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      li {
+        a {
+          margin: auto;
+          width: 100%;
+          color: #777779;
+          display: block;
+          text-decoration: none;
+
+          &.active {
+            i {
+              color: white;
+            }
+          }
+
+          i {
+            display: block;
+            margin: auto;
+            width: 80%;
+            text-align: center;
+            font-size: 3.8rem;
+            line-height: 50px;
+            margin-top: 10px;
+
+            &:hover {
+              color: white;
+              background-color: #252527;
+              border-radius: 8px;
+            }
+          }
+        }
+
+        &.sidebar-online {
+          cursor: pointer;
+          background-color: rgba(0,0,0,0.4);
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          bottom: 50px;
+          width: 100%;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          text-align: center;
+          font-size: 1.8rem;
+          color: white;
+          i {
+            margin-right: 5px;
+            font-size: 3rem;
+          }
+        }
+      }
+
+      .sidebar-main {
+        height: 60px;
+        background: #03abf7;
+
+        .brand-logo {
+          height: 60px;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
+    }
+}
+
+ul.sidebar {
+  width: 100%;
+}
+
+.page-content {
+  padding-top:80px;
+}
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+.row.row-super {
+  -moz-column-width: auto;
+  -webkit-column-width: auto;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  -moz-column-gap: 1em;
+  -webkit-column-gap:1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.item {
+  display: inline-block;
+  padding: .25rem;
+  width:  100%;
+  .panel {
+    position: relative;
+    display: block;
+  }
+}
+
+@media(max-width: 767px) {
+  .bookmaker-breakdown-table {
+    font-size: 1rem;
+  }
+  #sidebar-wrapper {
+    display: none;
+  }
+
+  #page-wrapper {
+    padding-left: 0;
+  }
+
+  #content-wrapper {
+    .header {
+      width: 100%;
+      background-color: #03abf7;
+
+      .mobile-logo {
+        img {
+          height: 50px;
+          margin-top: -5px;
+        }
+      }
+
+      .title-container {
+        .title {
+          color: white;
+          font-size: 2.8rem;
+          text-transform: uppercase;
+          font-weight: 300;
+        }
+      }
+
+      .collapsable-menu {
+        display: inline-block;
+        i.dropdown-toggle {
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+        }
+
+        ul.dropdown-menu {
+          font-size: 1.6rem;
+
+          li {
+            height: 40px;
+            i {
+              vertical-align: middle;
+              font-size: 2.6rem;
+              padding-right: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .row.row-super {
+    -moz-column-width: auto;
+    -webkit-column-width: auto;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-gap: 1em;
+    -webkit-column-gap:1em;
+  }
+}
+
+.bottom-left-static-button {
+  z-index: 2147483000;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  left: 80px;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid #cecece;
+  font-weight: 100;
+  margin: auto;
+  background-color: rgba(175, 47, 47, 0.8);
+
+  i {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.alert-hijack {
+  position: fixed;
+  z-index: 10000000;
+  bottom: 0;
+  cursor: pointer;
+}
+
+
+.alert-news {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: center;
+  color: black;
+  font-size: 1.7rem;
+}
