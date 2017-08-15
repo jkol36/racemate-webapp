@@ -4,6 +4,7 @@ import React from 'react'
 import {
   AuthContainer,
   AppContainer,
+  RacefeedContainer
 } from 'containers'
 
 import {
@@ -22,6 +23,7 @@ export default () => [(
     <Route path='/a' component={AppContainer}>
       <IndexRedirect to='/dashboard'/>
       <Route path='/dashboard' component={DashboardComponent} />
+      <Route path='/racefeed' component={RacefeedContainer} />
     </Route>
   </Route>
 )]

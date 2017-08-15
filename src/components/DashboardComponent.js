@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {
   DashboardMetrics,
   DashboardChart,
-  BookmakerBreakdown,
   InplayMetrics,
   LiveTradefeed
 } from 'components'
@@ -11,12 +10,16 @@ import { connect } from 'react-redux'
 class _DashboardComponent extends Component {
 
   render() {
-    //const { userbets, user, currencies } = this.props
-    //const openBets = userbets.filter(t => t.status === 1)
-    //const settledTrades = userbets.filter(t => t.status !== 1).sort((a, b) => a.match.startTime - b.match.startTime)
+    const { userbets, user, currencies } = this.props
+    const openBets = userbets.filter(b => b.status === 1)
+    const settledBets = userbets.filter(b => b.status !== 1).sort((a, b) => a.match.startTime - b.match.startTime)
     return (
       <div className='container-fluid'>
-        hello world  
+        <DashboardMetrics
+          bets={settledBets} 
+          user={user}
+          currencies={currencies}
+        />
       </div>
     )
   }

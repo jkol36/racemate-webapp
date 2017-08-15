@@ -54,6 +54,27 @@ export const fetchUser = (data) => dispatch => {
             text: false,
             email: false
           },
+          presets: {
+            dummy: 1,
+            1: {
+              name: 'My first preset',
+              horses: [],
+              recommendedLeagues: false,
+              edge: {
+                gte: 1,
+                lte: 100
+              },
+              odds: {
+                gte: 1,
+                lte: 5
+              },
+              hoursBefore: {
+                lte: 48,
+                gte: 0
+              },
+              sports: []
+            }
+          },
           subscription: {
             permissionLevel: 0
           }

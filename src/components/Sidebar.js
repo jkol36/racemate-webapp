@@ -16,7 +16,7 @@ export class Sidebar extends Component {
             </Link>
           </li>
           <li>
-            <Link to='/tradefeed' data-tip="Racefeed" data-for='sidebar-tooltips' activeClassName='active'>
+            <Link to='/racefeed' data-tip="Racefeed" data-for='sidebar-tooltips' activeClassName='active'>
               <i className='ionicons ion-ios-heart-outline'></i>
             </Link>
           </li>

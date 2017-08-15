@@ -30,7 +30,7 @@ const byId = (state={}, action) => {
   }
 }
 
-const trade = (state={}, action) => {
+const races = (state={}, action) => {
   switch(action.type) {
     case C.ADD_TRADE:
     case C.CHANGE_TRADE:

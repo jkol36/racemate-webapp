@@ -7,33 +7,33 @@ import 'less/widget.less'
 export class DashboardMetrics extends Component {
 
   componentDidMount() {
-    const { trades, currencies, user, user: { mainCurrency } } = this.props
+    const { bets, currencies, user, user: { mainCurrency } } = this.props
     let totalTurnover = 0
     let totalProfit = 0
-    for (var t of trades) {
-      totalProfit += convertCurrency(calculateBetReturn(t.wager, t.odds, t.status) - t.wager, t.currency, mainCurrency, currencies)
-      totalTurnover += convertCurrency(t.wager, t.currency, mainCurrency, currencies)
+    for (var b of bets) {
+      totalProfit += convertCurrency(calculateBetReturn(b.wager, b.odds, b.status) - b.wager, b.currency, mainCurrency, currencies)
+      totalTurnover += convertCurrency(b.wager, b.currency, mainCurrency, currencies)
     }
     analytics.identify(this.props.user.uid, {
       totalProfit,
       totalTurnover,
       averageROI: totalProfit / (totalTurnover || 1),
-      trades: trades.length
+      bets: bets.length
     })
   }
   render() {
-    const { trades, currencies, user, user: {mainCurrency} } = this.props
+    const { bets, currencies, user, user: {mainCurrency} } = this.props
     let totalTurnover = 0
     let totalProfit = 0
-    for (var t of trades) {
-      totalProfit += convertCurrency(calculateBetReturn(t.wager, t.odds, t.status) - t.wager, t.currency, mainCurrency, currencies)
-      totalTurnover += convertCurrency(t.wager, t.currency, mainCurrency, currencies)
+    for (var b of bets) {
+      totalProfit += convertCurrency(calculateBetReturn(b.wager, b.odds, b.status) - b.wager, b.currency, mainCurrency, currencies)
+      totalTurnover += convertCurrency(b.wager, b.currency, mainCurrency, currencies)
     }
     return (
       <div className='row widgets'>
         <Widget icon='rocket'
           color='blue'
-          number={numeral(getFundGrowth(trades, user, currencies)).format('0.0') + '%'}
+          number={numeral(getFundGrowth(bets, user, currencies)).format('0.0') + '%'}
           description='Fund growth'
         />
         <Widget icon='line-chart'
@@ -48,8 +48,8 @@ export class DashboardMetrics extends Component {
         />
         <Widget icon='slack'
           color='red'
-          number={ trades.length }
-          description='Number of trades'
+          number={ bets.length }
+          description='Number of bets'
         />
       </div>
     )
